@@ -7,6 +7,6 @@ export default function useDelayedValue(value, delay = 500) {
       setDelayedValue(value);
     }, delay);
     return () => clearTimeout(timeoutId);
-  }, [value])
+  }, [value, delay])
   return delayedValue;
 }
